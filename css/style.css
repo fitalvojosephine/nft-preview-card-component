@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /* Colors  */
+  --primary-color: hsl(215, 51%, 70%);
+  --secondary-color: hsl(178, 100%, 50%);
+
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --hr-line: hsl(215, 32%, 27%);
+  --white-color: hsl(0, 0%, 100%);
+  --font-outfit: font-family: "Outfit", sans-serif;
+}
+
+body {
+	font-size: 1.125rem;
+	background-color: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  color: var(--primary-color);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+	background-color: var(--card-background);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.container__card {
+  padding: 1.5rem;
+  max-width: 21rem;
+  box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.container__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.container__eye-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.container__primary-heading {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  margin: 1.4rem 0 0.75rem;
+}
+
+.container__primary-heading:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.container__description {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  letter-spacing: 0.015rem;
+}
+
+.container__name {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.container__ethereum {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1.4rem;
+
+}
+
+.container__crypto {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+
+.container__profile {
+  display: flex;
+  border-top: .0625rem solid var(--hr-line);
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.container__avatar {
+  width: 2rem;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+
+.container__span {
+  color: var(--white-color);
+}
+
+.container__span:hover {
+  color: var(--secondary-color);
+}
