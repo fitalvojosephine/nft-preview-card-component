@@ -14,6 +14,7 @@
   --card-background: hsl(216, 50%, 16%);
   --hr-line: hsl(215, 32%, 27%);
   --white-color: hsl(0, 0%, 100%);
+  --eye-layer-color: hsla(178, 100%, 50%, 0.4);
   --font-outfit: font-family: "Outfit", sans-serif;
 }
 
@@ -34,19 +35,54 @@ body {
 	background-color: var(--card-background);
   border-radius: 1rem;
   overflow: hidden;
-}
-
-.container__card {
   padding: 1.5rem;
   max-width: 21rem;
   box-shadow: 0 1.5rem 1.5rem 0 rgba(0, 0, 0, 0.2);
-  position: relative;
+  
 }
+
+.container__card {
+  position: relative;
+  display: block;
+  
+}
+
+.container__eye-layer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.container__card:hover .container__eye-layer:hover {
+background: var(--eye-layer-color);
+}
+
+.container-view {
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.container-view:hover {
+  opacity: 1;
+}
+
 
 .container__img {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
+  vertical-align: top;
+  cursor: pointer;
 }
 
 .container__eye-layer {
